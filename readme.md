@@ -1,6 +1,8 @@
 # GSD
 
-GSD, short for Getting Shit Done™, toggles mapping a list of hosts to the loopback interface in the hosts file.
+GSD, short for Getting Shit Done™, lets you get shit done.
+
+It toggles mapping a list of hosts to the loopback interface in the hosts file.
 
 It's inspired by Vic Cherubni's [get-shit-done].
 
