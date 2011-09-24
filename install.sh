@@ -1,5 +1,3 @@
-#!/usr/bin/env bash
-
 echo Cloning GSD...
 git clone git://github.com/beaumartinez/gsd.git ~/lib/gsd
 
