@@ -10,7 +10,7 @@ It's inspired by Vic Cherubni's [get-shit-done].
 
 It's one command. Run the [install script]:
 
-[install script]: https://github.com/beaumartinez/gsd/blob/master/install.sh
+[install script]: http://github.com/beaumartinez/gsd/blob/master/install.sh
 
     curl -s https://raw.github.com/beaumartinez/gsd/master/install.sh | bash
 
