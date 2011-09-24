@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+if [[ $EUID -ne 0 ]]; then
+    sudo $0 $@
+    
+    exit
+fi
+
+python ~/lib/gsd/gsd.py $@
