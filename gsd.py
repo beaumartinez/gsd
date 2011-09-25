@@ -89,8 +89,8 @@ def start_getting_shit_done():
     try:
         sites = read_sites_file(SITES_FILE_PATH)
     except IOError:
-        print >> sys.stderr, 'Error: No sites file ({}) to read'.format(
-            RAW_SITES_FILE_PATH)
+        print >> sys.stderr, ('Error: Can\'t read sites file ({}). Does it '
+            'exist?'.format(RAW_SITES_FILE_PATH))
         
         sys.exit(2)
 
