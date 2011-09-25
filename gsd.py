@@ -10,6 +10,9 @@ GSD_BLOCK_END = u'# GSD end'
 
 HOSTS_FILE_PATH = '/etc/hosts'
 
+RAW_SITES_FILE_PATH = '~/.gsd-sites'
+SITES_FILE_PATH = os.path.expanduser(RAW_SITES_FILE_PATH)
+
 def read_sites_file(path, encoding=ENCODING):
     with codecs.open(path, encoding=encoding) as file_:
         contents = file_.read()
@@ -84,9 +87,10 @@ CANT_CHANGE_HOSTS_FILE_MESSAGE = ('Error: Can\'t change hosts file. Are you '
 
 def start_getting_shit_done():
     try:
-        sites = read_sites_file(os.path.expanduser('~/.gsd-sites'))
+        sites = read_sites_file(SITES_FILE_PATH)
     except IOError:
-        print >> sys.stderr, 'Error: No sites file (~/.gsd-sites) to read'
+        print >> sys.stderr, 'Error: No sites file ({}) to read'.format(
+            RAW_SITES_FILE_PATH)
         
         sys.exit(2)
 
